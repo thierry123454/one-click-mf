@@ -20,19 +20,24 @@ Turn today’s trends into absurd, shareable, short-form videos in minutes. One-
 
 ### 1) Clone & install
 ```bash
-git clone <your-repo-url>
-cd meme-factory
+git clone https://github.com/thierry123454/one-click-mf.git
+cd one-click-meme-factory
 npm install
 ```
 
 ### 2) Environment variables
+Setup Runway API Key in the project root:
+```bash
+export RUNWAYML_API_SECRET="key_123456789012345678901234567890"
+```
+
 Create .env.local in the project root:
 ```bash
 # OpenAI (for prompt generation & trend analysis)
 OPENAI_API_KEY=sk-********************************
 
 # Runway (for image/video generation)
-RUNWAY_API_KEY=rw_api_****************************
+RUNWAY_API_KEY=key_****************************
 
 # YouTube Data API v3 (for trending fetch)
 YOUTUBE_API_KEY=AIzaSy********************************
