@@ -57,6 +57,7 @@ export async function POST(req: Request) {
       .waitForTaskOutput();
 
     const imageUrl = extractAssetUrl(imageTask);
+
     if (!imageUrl) {
       console.error('Image task shape:', JSON.stringify(imageTask, null, 2));
       return new Response('Failed to create image', { status: 500 });
@@ -74,6 +75,7 @@ export async function POST(req: Request) {
       .waitForTaskOutput();
 
     const videoUrl = extractAssetUrl(videoTask);
+    console.log(videoUrl);
     if (!videoUrl) {
       console.error('Video task shape:', JSON.stringify(videoTask, null, 2));
       return new Response('Failed to create video', { status: 500 });

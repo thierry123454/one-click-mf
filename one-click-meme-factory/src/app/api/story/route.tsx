@@ -12,7 +12,8 @@ Reply with the prompt ONLY (no preface, no quotes). Optimize for Runway gen4_tur
   const user = `
 Create ONE prompt for a 5s meme video.
 Include: visual style, key actions, camera moves, and energetic tone.
-Keep playful, absurd, funny and very meme-able. Trend: "${trendTitle}". Subjects: ${subjects ?? 'none'}.
+Do NOT include: References to cuts - it should be a single shot story.
+Keep playful, absurd, funny and very meme-able. This is what it should include: "${trendTitle}". Additional subjects: ${subjects ?? 'none'}.
 `;
 
 console.log(user)
